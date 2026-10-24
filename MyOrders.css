@@ -1,0 +1,264 @@
+/* My Orders Page */
+
+.my-orders-page {
+  min-height: 100vh;
+  padding: 28px;
+  background: #faf6f0;
+  color: #432b27;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.my-orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.my-orders-eyebrow {
+  color: #9a6b50;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.my-orders-title {
+  color: #542d35;
+  font-size: 32px;
+  margin: 8px 0;
+}
+
+.my-orders-subtitle {
+  color: #806b61;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.my-orders-back-button {
+  background: #542d35;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.my-orders-back-button:hover {
+  background: #70434b;
+  transform: translateY(-1px);
+}
+
+/* Statistics */
+
+.my-orders-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.my-orders-stat-card {
+  background: #fff;
+  padding: 22px;
+  border: 1px solid #eee1d6;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(84, 45, 53, 0.05);
+}
+
+.my-orders-stat-label {
+  display: block;
+  color: #806b61;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.my-orders-stat-number {
+  color: #542d35;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Orders Table */
+
+.my-orders-panel {
+  background: #fff;
+  border: 1px solid #eee1d6;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(84, 45, 53, 0.04);
+}
+
+.my-orders-section-title {
+  color: #542d35;
+  margin: 0 0 7px;
+  font-size: 21px;
+}
+
+.my-orders-section-subtitle {
+  color: #806b61;
+  font-size: 13px;
+  margin: 0 0 20px;
+}
+
+.my-orders-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.my-orders-search,
+.my-orders-select {
+  padding: 12px;
+  border: 1px solid #dfcec0;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: #fff;
+  color: #432b27;
+}
+
+.my-orders-search {
+  flex: 1;
+  min-width: 200px;
+}
+
+.my-orders-select {
+  min-width: 160px;
+  cursor: pointer;
+}
+
+.my-orders-search:focus,
+.my-orders-select:focus {
+  border-color: #9a6b50;
+  box-shadow: 0 0 0 3px rgba(154, 107, 80, 0.12);
+}
+
+.my-orders-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+.my-orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.my-orders-table thead {
+  background: #f7eee5;
+}
+
+.my-orders-table th {
+  color: #542d35;
+  padding: 15px 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.my-orders-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #eee7df;
+  white-space: nowrap;
+}
+
+.my-orders-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.my-orders-table tbody tr:hover {
+  background: #fdf9f5;
+}
+
+.my-orders-id {
+  color: #542d35;
+  font-weight: bold;
+}
+
+.my-orders-cake-name {
+  color: #432b27;
+  font-weight: 600;
+}
+
+.my-orders-amount {
+  color: #542d35;
+  font-weight: bold;
+}
+
+/* Status labels */
+
+.my-orders-status {
+  display: inline-block;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.my-orders-status.pending {
+  background: #fff0d5;
+  color: #936114;
+}
+
+.my-orders-status.in-production {
+  background: #f3e4e8;
+  color: #813d4b;
+}
+
+.my-orders-status.ready {
+  background: #e2edff;
+  color: #2856a5;
+}
+
+.my-orders-status.completed,
+.my-orders-status.delivered {
+  background: #e1f4e8;
+  color: #237447;
+}
+
+/* Empty State */
+
+.my-orders-empty {
+  padding: 35px 15px;
+  text-align: center;
+  color: #806b61;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .my-orders-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .my-orders-page {
+    padding: 16px;
+  }
+
+  .my-orders-title {
+    font-size: 26px;
+  }
+
+  .my-orders-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .my-orders-panel {
+    padding: 14px;
+  }
+
+  .my-orders-search,
+  .my-orders-select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

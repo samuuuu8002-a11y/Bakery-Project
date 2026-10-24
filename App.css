@@ -1,0 +1,62 @@
+
+/* Main App Background */
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(241, 223, 203, 0.65),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(232, 203, 178, 0.55),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #fffaf4 0%,
+      #f8eee4 50%,
+      #fff7ef 100%
+    );
+  color: #40271f;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+/* Prevent unwanted default spacing */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .app-container {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
